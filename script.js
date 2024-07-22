@@ -2,7 +2,7 @@ document.getElementById('preferencesForm').addEventListener('submit', async func
     event.preventDefault();
     const destination = document.getElementById('destination').value;
 
-    const response = await fetch('https://4hwcfytsr6.execute-api.us-east-1.amazonaws.com/prod' + encodeURIComponent(destination));
+    const response = await fetch('https://4hwcfytsr6.execute-api.us-east-1.amazonaws.com/prod?destination=' + encodeURIComponent(destination));
     const data = await response.json();
 
     document.getElementById('results').innerHTML = `
